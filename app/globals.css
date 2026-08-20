@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-data: var(--data);
+  --color-bad: var(--bad);
+  --color-good: var(--good);
+  --color-hairline: var(--hairline);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  color-scheme: light;
+  --background: oklch(0.985 0.002 247);
+  --foreground: oklch(0.21 0.02 255);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.02 255);
+  /* Single accent for all data marks. */
+  --data: #2a78d6;
+  /* Reserved for "bad": late rate, low review scores, bottleneck outliers. */
+  --bad: #c8384a;
+  --good: #1f9254;
+  --hairline: oklch(0.92 0.004 247);
+  --muted: oklch(0.965 0.003 247);
+  --muted-foreground: oklch(0.5 0.012 255);
+  --border: oklch(0.905 0.005 247);
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+}

@@ -1,0 +1,6 @@
+delay_bucket,mean,count
+on_time,4.294,86816
+late_1_3d,3.764,2621
+late_4_7d,2.317,1766
+late_8_14d,1.744,1741
+late_15d_plus,1.71,1499

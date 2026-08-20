@@ -1,0 +1,4 @@
+allowBuilds:
+  # next pulls sharp in for image optimisation; this dashboard ships no images,
+  # but pnpm blocks installs until the build script is explicitly decided.
+  sharp: true
