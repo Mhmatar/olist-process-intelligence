@@ -1,0 +1,9 @@
+# Netlify picks up Next.js automatically and installs its Next runtime plugin;
+# this file just pins the build command and a modern Node version so the build
+# is reproducible. Do not set a `publish` directory — the Next runtime manages
+# output (static assets + serverless functions) on its own.
+[build]
+  command = "next build"
+
+[build.environment]
+  NODE_VERSION = "20"
